@@ -8,10 +8,10 @@ def emotionDetector():
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
     return (
-        f"Para la declaración dada, la respuesta del sistema es "
+        f"For the given statement, the system response is "
         f"'anger': {response['anger']}, 'disgust': {response['disgust']}, "
         f"'fear': {response['fear']}, 'joy': {response['joy']} y 'sadness': {response['sadness']}. "
-        f"La emoción dominante es {response['Dominant Emotion']}."
+        f"The dominant emotion is {response['Dominant Emotion']}."
     )
 
 @app.route("/")
